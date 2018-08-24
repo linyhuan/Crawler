@@ -211,7 +211,7 @@ class toutiao(object):
 
 
 if __name__=='__main__':
-    path=r'E:\'  ##保存路径
+    path=r'E:\toutiao'  ##保存路径
     url='https://www.toutiao.com/ch/news_tech/'  ##频道URL
     t=toutiao(path,url)
     #t.getdata()
