@@ -1,0 +1,35 @@
+﻿e.getHoney = function() {
+        var t = Math.floor((new Date).getTime() / 1e3)    1534389637
+          , e = t.toString(16).toUpperCase()              "5B74ED85" 
+          , i = md5(t).toString().toUpperCase();	"3648C71EF83906770E9B66D4DDD7D056"
+        if (8 != e.length)
+            return {
+                as: "479BB4B7254C150",
+                cp: "7E0AC8874BB0985"
+            };
+        for (var n = i.slice(0, 5), a = i.slice(-5), s = "", o = 0; 5 > o; o++)    	n=3648C   a=7D056 
+            s += n[o] + e[o];				s=356B4784CE	
+        for (var r = "", c = 0; 5 > c; c++)		
+            r += e[c + 3] + a[c];			r=47EDD08556
+        return {
+            as: "A1" + s + e.slice(-3),			as=A1356B4784CED85
+            cp: e.slice(0, 3) + r + "E1"		cp=5B747EDD08556E1	
+        }
+
+function e(t) {
+        var e = ascp.getHoney()
+          , i = "";
+        window.TAC && (i = TAC.sign("refresh" === t ? 0 : r.params.max_behot_time_tmp)),
+        r.params = _.extend({}, r.params, {
+            as: e.as,
+            cp: e.cp,
+            max_behot_time: "refresh" === t ? 0 : r.params.max_behot_time_tmp,
+            _signature: i
+        })
+
+
+
+https://www.toutiao.com/api/pc/feed/?category=news_game&utm_source=toutiao&widen=1&max_behot_time=0&max_behot_time_tmp=0&tadrequire=true&as=A1657BD7F616316&cp=5B76C6B381066E1&_signature=5DZUtAAAv0tOGRQ0bvdzIuQ2VK
+
+
+https://www.toutiao.com/api/pc/feed/?category=news_game&utm_source=toutiao&widen=1&max_behot_time=1534479270&max_behot_time_tmp=1534479270&tadrequire=true&as=A145CBE7C66632D&cp=5B76E6A3624DDE1&_signature=5DZUtAAAv0tOGRQ0bvfioOQ2VK
