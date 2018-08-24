@@ -1,4 +1,5 @@
 #!coding=utf-8
+##爬取今日头条频道数据
 import requests
 import re
 import json
@@ -210,8 +211,8 @@ class toutiao(object):
 
 
 if __name__=='__main__':
-    path=r'E:\lyh\data\shichang\toutiao'
-    url='https://www.toutiao.com/ch/news_tech/'
+    path=r'E:\' ##保存路径
+    url='https://www.toutiao.com/ch/news_tech/'  ##频道URL
     t=toutiao(path,url)
     #t.getdata()
     t.ttapi()
