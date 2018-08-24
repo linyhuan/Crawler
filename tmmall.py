@@ -258,39 +258,9 @@ class tm(object):####手机端
 
 
 
-
-
-
-
 if __name__=='__main__':
-    path=r'E:\lyh\data\mallprice\tm\0818'
+    path=r'E:\tm'
     tm=tm(path)
-
-#     r=[
-# 'https://tiansebg.tmall.com',
-# 'https://tiansety.tmall.com',
-# 'https://tiansegz.tmall.com',
-# 'https://tiansetc.tmall.com',
-# 'https://tianseasd.tmall.com',
-# 'https://tiansemanyu.tmall.com',
-# 'https://tianseyj.tmall.com/'
-#
-#     ]
-
-    df=tm.goodsid('https://tiansegz.tmall.com')
+    df=tm.goodsid('https://intel.tmall.com')
     tm.iddata(df)
-    print('-------------')
-    df = tm.goodsid('https://tiansetc.tmall.com')
-    tm.iddata(df)
-    print('-------------')
-    df = tm.goodsid('https://tianseasd.tmall.com')
-    tm.iddata(df)
-    print('-------------')
-    df = tm.goodsid('https://tiansemanyu.tmall.com')
-    tm.iddata(df)
-    print('-------------')
-    df = tm.goodsid('https://tianseyj.tmall.com')
-    tm.iddata(df)
-    print('-------------')
-
-
+    
