@@ -143,7 +143,7 @@ class toutiao(object):
         #print(ecp)
         return eas,ecp
 
-    def get_js(self):  ###二牛破解as ,cp,  _signature  参数的代码，然而具体关系不确定，不能连续爬取
+    def get_js(self):  ###大牛破解as ,cp,  _signature  参数的代码，然而具体关系不确定，不能连续爬取
         # f = open("D:/WorkSpace/MyWorkSpace/jsdemo/js/des_rsa.js",'r',encoding='UTF-8')
         f = open(r"E:\lyh\data\shichang\toutiao\toutiao-TAC.sign.js", 'r', encoding='UTF-8')
         line = f.readline()
@@ -154,68 +154,13 @@ class toutiao(object):
         ctx = execjs.compile(htmlstr)
         return ctx.call('get_as_cp_signature')
 
-    def ttapi(self):  ####大牛的APP模式
-        t2 = int(time.time())-500
-        for i in range(10):
-            time.sleep(3)
-
-            t=int(time.time())
-
-            params={
-            'category':self.channel,
-            'refer':'1',   ###???，固定值1
-            'count':'20',   ####返回数量，默认为20
-            'min_behot_time':t2,          ####上次请求时间的时间戳，例:1491981025
-            'last_refresh_sub_entrance_interval':t-10,#####本次请求时间的时间戳，例:1491981165
-            'loc_mode':'',
-            'loc_time':int(t/1000)*1000,###本地时间
-            'latitude':'',###经度
-            'longitude':'',###纬度
-            'city':'',###当前城市
-            'tt_from':'',
-            'lac':'',
-            'cid':'',
-            'cp':'',
-            'iid':'2348577934',###某个唯一 id，长度为10
-            'device_id':'42433242851',###设备id，长度为11
-            'ac':'',
-            'channel':'',
-            'aid':'',
-            'app_name':'',
-            'version_code':'',
-            'version_name':'',
-            'device_platform':'',
-            'ab_version':'',
-            'ab_client':'',
-            'ab_group':'',
-            'ab_feature':'',
-            'abflag':'3',
-            'ssmix':'a',
-            'device_type':'',
-            'device_brand':'',
-            'language':'zh',
-            'os_api':'',
-            'os_version':'',
-            'openudid':'1b8d5bf69dc4a561',####某个唯一id，长度为16
-            'manifest_version_code':'',
-            'resolution':'',
-            'dpi':'',
-            'update_version_code':'',
-            '_rticket':''
-
-            }
-            url='http://is.snssdk.com/api/news/feed/v51/'
-            app=self.s.get(url=url,params=params,verify=False)
-            print(app.text)
-            t2=t-10
-
+ 
 
 if __name__=='__main__':
     path=r'E:\new'  ##保存路径
     url='https://www.toutiao.com/ch/news_tech/'  ##频道URL
     t=toutiao(path,url)
-    #t.getdata()
-    t.ttapi()
+    t.getdata()
     t.closes()
 
 
